@@ -82,9 +82,9 @@ class Dog
       WHERE id = ?
     SQL
 
-  DB[:conn].execute(sql, self.name, self.breed, self.id).collect do |row|
-    self.new_from_db(row)
+    DB[:conn].execute(sql, self.name, self.breed, self.id).collect do |row|
+      self.new_from_db(row)
+    end
   end
-end
 
 end
