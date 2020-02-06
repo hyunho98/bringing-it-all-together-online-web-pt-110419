@@ -40,4 +40,8 @@ class Dog
     dog.save
     dog
   end
+
+  def self.new_from_db(row)
+    dog(row[0], row[1], row[2])
+  end
 end
